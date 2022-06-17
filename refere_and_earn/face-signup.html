@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  form {
+  margin: auto;
+  height: 500px;
+  margin-top:0px;
+  width: 25%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 70px;
+  line-height:30px;
+ 
+}
+label {
+  font-size: 20px;
+}
+h1{
+    text-align: center;
+  
+}
+input,button{
+   width: 100%;
+    font-size: 20px;
+    border-radius:5px;
+    padding: 5px;
+   line-height:30px;
+  }
+p{
+    font-size: 15px;
+   
+    
+}
+
+#signup{
+    text-align: center;
+    background-color: hsl(0,0%,96%);
+    color:wheat;
+    border-radius: 15px;
+    margin-top: 10px;
+} 
+#signup:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+     <div id="cont">
+    
+     <form>
+        <h1>Fill In A Few More Details</h1>
+        <p>If you don't have an account with us, or are just unsure then enter your information below.</p>
+        <label>Full Name (AS per Driving License)</label><br>
+       <input id="name" type="name" placeholder="Enter your Name" ><br>
+       <label>Email</label><br>
+       <input id="email" type="email" placeholder="Enter your email" ><br>
+       <label for="">Password</label>
+       <input id="Password" type="Password" placeholder="Enter Password" ><br> 
+       <button id="signup">REGISTER</button>
+       <p>Already have an account? <a href="face-lognin.html" target="_blank">Here Sign In</a></p>
+    </form>
+    </div>
+</body>
+</html>
+<script>
+   
+    let form =document.querySelector("form");
+    let userData=JSON.parse(localStorage.getItem("userData"))||[]
+    form.addEventListener("submit",function(){
+   event.preventDefault();
+    // console.log("work");
+    let data={
+        name:form.name.value,
+        email:form.email.value,
+        Password:form.Password.value,
+
+    }  
+    if(checkEmail(data.email)==true){
+      userData.push(data)  ;
+      localStorage.setItem("userData",JSON.stringify(userData));
+      alert("Account Creating Succesful")
+      window.location.href="face-lognin.html"
+
+    } else{
+        alert("Account Already Exists")  
+    }
+    })
+    function checkEmail(email,pass){
+     let filterd=userData.filter(function(elem){
+        return email==elem.email;
+     }) 
+     if(filterd.length>0){
+        return false;
+     }
+     return true;
+    }
+</script>
