@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      img{
+        width:30%;
+        display: block;
+        margin: auto;
+        
+      }
+      #main{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #main>div:nth-child(2){
+        display: flex;
+        width: 50%;
+        border: 1px solid grey;
+        margin: auto;
+        padding:10px 0px 30px 25px ;
+        border-radius: 5px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        
+      }
+      #main>div:nth-child(2)>div>img{
+        width: 18px;
+        margin-left: -2px;
+        margin-top: 25px;
+      }
+      #main>div:nth-child(2)>div:nth-child(1){
+        margin-right: 200px;
+        
+      }
+      #main>div:nth-child(2)>div>img+h3{
+        margin-top: -1px;
+      }
+
+      .grn{
+        color:#099e40 ;
+        margin-top: 50px;
+        font-weight: bolder;
+      }
+      .blk{
+        margin-top: -20px;
+      }
+
+      /* #main>div:nth-child(2)>div:nth-child(1):hover{
+        background-color: grey;
+        height: 100%;
+        width: 100%;
+      }  */
+
+     /* #main>div:nth-child(2)>div:nth-child(2):hover{
+        background-color: rgb(223, 223, 223);
+        height: 100%;
+        width: 100%;
+      }  */
+
+      #main>div:nth-child(3){
+        width: 70%;
+        color: rgb(222, 218, 218);
+        font-size: 20px;
+        line-height: 35px;
+        margin: auto;
+        background-color: 
+#f5f5f5; 
+padding: 15px; 
+      }
+
+    #last{
+        width: 8%;
+    }
+   #lastpart{
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: transparent;
+    color: #099e40;
+   } 
+   #lastimg{
+    width:30px;
+    margin-left: 830px;
+    color: #099e40;
+   }
+   #lasttag{
+    display:flex ;
+    margin:0px 0px 0px 230px;
+   }
+
+   #lasttag>p{
+    color: rgb(112, 111, 111);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+   }
+
+#target{
+  margin-top: 80px;
+  
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/a5a9b25f3cb492c507d39cc0134cb0c6.svg" alt="">
+        </div>
+        <div>
+            <div>
+               <h3>Write an Email</h3>
+               <p class="blk">Expect reply within 24hours</p>
+               <p class="grn" id="target">host.sales.in@zoomcar.com</p>
+            </div>
+            <div>
+              <img src="https://cdn1.iconfinder.com/data/icons/material-communication/18/phone-512.png" alt="">
+               <h3>Call us</h3>
+               <p class="blk">Available from 9 am to 9 pm</p>
+               <p class="grn" >0806-897-2200</p>
+            </div>
+        </div>
+        <div>
+           <h1>Never <br> Stop <br> Living.</h1>
+           <div id="last">
+              <hr>
+           </div>
+        </div>
+
+    </div>
+    
+    <div id="lasttag">
+      <p>More about ZoomCar Host</p>
+      <img id="lastimg" src="https://www.zoomcar.com/zap/subscribe/build/b6a35e84e2679c629ed351c4985e858f.svg" alt="">
+    </div>
+  
+</body>
+</html>
