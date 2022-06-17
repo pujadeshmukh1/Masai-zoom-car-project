@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <style>
+    *{
+        margin:0px;
+        padding: 0px;
+        box-sizing: border-box;
+        }
+       body{
+        background-color:rgb(243, 243, 243);
+      } 
+      div{
+        background-color: white;
+        width: 50%;
+        margin: auto;
+        padding: 5%;
+        margin-top: 5%;
+        border-radius: 20px;
+        line-height: 40px;
+      }
+      /* input{
+        width: 80%;
+        font-size: 20px;
+       line-height: 10px;
+        margin-top: 5%;
+      } */
+      input{
+        width: 90%;
+        font-size: 20px; 
+        margin-left: 20px;
+       
+      }
+      label{
+        font-size:20px;
+        margin-left: 20px;
+      }
+      h1,p{
+       
+        text-align: center;
+        margin-top: 20px;
+      }
+      h3{
+        border: 1px solid;
+        text-align: center;
+        margin-top: 20px;
+        background-color:hsl(0,0%,96%);
+        color: wheat;
+        width: 80%;
+        /* height: 25PX; */
+        margin-left: 25px;
+      }
+      h3:hover{
+      background-color: green;
+      cursor: pointer;
+      }
+      a{
+        text-decoration: none;
+      }
+
+    </style>
+</head>
+<body>
+    <div>
+    <form>
+       <h1>Login</h1>
+      <label>Email</label><br>
+        <input id="email" type="email" placeholder="Email"><br>
+        <label for="">password</label><br>
+        <input id="password" type="password" placeholder="password">
+        <!-- <input type="submit" value="Login"> -->
+       <a href="https://web.whatsapp.com/"><h3>submit</h3></a> 
+    </form>
+    <p>You Have a Not Account <a href="signup.html">  Here Signup</a></p>
+</div>
+</body>
+</html>
+<!-- <script>
+  let form=document.querySelector("form");
+  let userData=JSON.parse(localStorage.getItem("userData"))||[]
+    form.addEventListener("submit",function(event){
+    event.preventDefault()
+    // console.log("alalla")
+   
+    let data={
+      email:form.email.value,
+      password:form.password.value,
+    }
+     if(checkSignin(data.email,data.password)===true){
+    localStorage.setItem("Signin",JSON.stringify(data));
+    alert("sign in successful")
+    window.location.href="index.html"
+     }else{
+      alert("wrong Username or password")
+     }
+      })
+
+    function checkSignin(email,password){
+      // console.log("work")
+    let filterd=userData.filter(function(element) {
+     return element.email===email && element.password===password;
+     })
+     if(filterd.length>0){
+      return true
+     }else{
+      false
+     }
+       }
+      
+</script> -->
