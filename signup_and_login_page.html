@@ -4,98 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup & Login Page</title>
+    <title>Share your car & Earn</title>
     <style>
-        div+div{
-            padding-right: 300px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 30px;
-            color: #10a310;
-            background-color: red;
-        }
-        img{
-            width: 34%;
-            display: block;
-            margin: auto;
-            padding-top: 20px;
-            
-        }
-        #main{
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            padding-bottom: 30px;
-        }
-        h2{
-            padding-top: 30px;
-            padding-left: 400px;
-            font-style: inherit;
-            padding-bottom: 20px;
-            
-        }
-        select+input {
-            width: 233px;
-            font-size: 17px;
-            border-color: transparent;
-            padding-bottom: 13px;
-        }
-        select{
-            font-size: 20PX;
-            border-color: transparent;
-        }
-        
-        hr+div{
-            width: 35%;
-            display: flex;
-            align-items: center;
-            margin: auto;
-            color: #10a310;
-            font-weight: bold;
-            font-size: 16px;
-            
-        }
-        div+img{
-            width: 40px;
-            margin-bottom: 15px;
-            
-        }
-        img+img{
-            width: 40px;
-            margin-right: 205px;
-            margin-bottom: 15px;
-        }
-        
-    </style>
+      #main{
+        /* border: 1px solid red; */
+        width: 60%;
+        height:650px;
+        margin: auto;
     
+      }
+      img{
+        margin-left:170px;
+       width: 55%;
+      }
+      h1{
+        margin-left:200px;
+        font-size:25px;
+      }
+      #main>div{
+        margin-left:200px;
+        gap: 20px;
+       display: flex;
+       
+    }
+    a{
+        text-decoration: none;
+      }
+     hr{
+      width: 400px;
+     }
+     p{
+      margin-left: 200px;
+      color: #10a310;
+      font: bold;
+     }
+     #image{
+    width: 40%;
+     }
+     #image>div{
+     
+      width:50%;
+      font-size:18px;
+      color: #10a310;
+     }
+     #image>img{
+     margin-left: -15px;
+      width:10%;
+      height:30px;
+    }
+    #image>a>img{
+      /* border: 1px solid red; */
+      margin-left: -15px;
+      width:160%;
+      height:30px;
+    }
+    
+    </style>
 </head>
 <body>
-    <img src="https://www.zoomcar.com/build/fb65fcc43b8bededb813e093ea2d47d3.svg" alt="Error">
-    <h2 style=>Enter details to login/sign-up</h2>
-    <div id="main" >
-        <select>
-            <option value="India"><img src="https://zoomcar-assets.zoomcar.com/images/original/38ff9c58fe221677b6e8958c1caba43d35710fe2.png?1654779648"> India +91</option>
-            <option value="Egypt">Egypt  +20</option>
-            <option value="vietnam">vietnam  +84 </option>
-            <option value="Indonesia">Indonesia+62 </option>
-        </select>
-        <input type="number" placeholder="Enter Mobile Number" > 
-        <hr style="width: 445px;" >
-    </div>
-    <div>Continue with Email ID</div>
-    <hr style="width: 445px;" >
-    <div>
-        <div>Continue via Social</div>
-        <img src="https://www.zoomcar.com/build/62ba375ec1a9fbcbee9e9099181c8d38.svg">
-        <img src="https://www.zoomcar.com/build/279de03b0c8ecdb4db56a79da6e775e6.svg">
+    <div id="main">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/a85b10721c4844397d581622fd92f22f.svg" alt="">
+        <h1>Enter details to login/sign-up</h1>
+        <div>
+            <select id="sel" style="border: transparent; border-radius: green;" >
+                <option value="">India  +91</option>  
+                <option value="">Egypt   +20</option>
+                <option value="">Viernam  +84</option>
+                <option value="">Indonesia  +62</option>
+            </select>
+            <a href="number.html"><h3>Enter Mobile Number</h3></a>
+        </div>
+        <hr>
+        <a href="final.html"><p>Continue with Email ID</p></a>
+        
+        <hr>
+        <div id="image">
+        <div>Continue via social</div>
+        <a href="https://www.facebook.com/"><img src="https://www.zoomcar.com/zap/subscribe/build/ced65728608b08251930d4b5fe42bd26.svg" alt=""></a>
+        <a href="https://google.com/"> <img src="https://www.zoomcar.com/zap/subscribe/build/2856782902ae6965e9e3e78a989d93cd.svg" alt=""></a>
+      </div>
     </div>
 
 </body>
 </html>
-
+        
 <script>
 
 </script>
