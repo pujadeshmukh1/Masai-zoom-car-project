@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomcar Host</title>
+     <link rel="icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHsAewMBEQACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAgMEBQcGAf/EAEMQAAEDAgEGCQgIBQUAAAAAAAEAAgQDBREGQVFUstESFRYhMTVhkZMTIiNxdIKhoxQyNlJVscHwJIGUotIHJkJEwv/EABkBAQADAQEAAAAAAAAAAAAAAAABAgQDBf/EAC0RAAICAAMGBQQDAQAAAAAAAAABAgMRE1EEEhQxMlIhM3GRsUFhgaEi4fAj/9oADAMBAAIRAxEAPwDsMp8oplS4VosSs6jQouLCaZwLyOk46MV5W07TNzcYvBIx22y3sEUnGlw1+V4zt6y51nc/c5b8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tQ40uOvyvGdvTOs7n7jflqHGlx1+V4zt6Z1nc/cb8tR2Ne7nGqioybWcR/xqPLmn1gq0doti8cSVZJfU0m0z23C3UJYAb5RuJbj0HoPxC9mqeZBSN0JKUUzMbv1rN9oftFeJd5kvVmCfUyIuZUEAIAQAgBACAEAIAQAgBACAEBouSf2fi+/tuXt7H5Efz8m2roRwt361m+0P2ivIu8yXqzJPqZEXMqCAdjx68qp5ONRqVX/AHWNJKtGMpPCKxJSb5E3iC7/AIfX7gunD29pbLnoHEF3/D6/cE4a7tGXPQOILv8Ah9fuCcNd2jLnoHEF3/D6/cE4a7tGXPQOILv+H1+4Jw13aMuehFmQZUFzWy6DqTnDFodhiQuc65Q6lgQ4tczyHClTXlsSPUrEdPAbiB6zmSFcpvCKxIjFy5D0u0XGFT8pJh1mMzuwxA9ZHQrTpsgsZIl1yXNEJcyoIAQGi5J/Z+L7+25e3sfkR/PybauhHC3frWb7Q/aK8i7zJerMk+pkRcyo7Eo/SJNKiajKQe4AvecA0aSrRjvNLElLF4Gl22rZbdFbHizIjWjpPlm4uOknHnK9qt01xwi0bo7kVgiVxpbdfi+M3er5tfcvctvR1DjS26/E8Zu9M2vuXuN6OocaW3X4njN3pm19y9xvR1DjS26/E8Zu9M2vuXuN6OpXXnKaDAjuMatTkyD9RlN3CA7SRmXG7aoQXg8WUnbGK8DkrTbZmUlwfXk1HeS4WNWsdlv75l59VU9oni/yZoQdssWaJDiUYcdlCPTFOmwYBo/fSvXhCMFhHkbUlFYIeLQQQRiDmKuSZllxbBZ7hTrxWgRZOJ8nmY8dIHYcQe9ePtlOXPeXJmK6G68UUVOsx+fA6CshxHEBouSf2fi+/tuXt7H5Efz8m2roRwt361m+0P2ivIu8yXqzJPqZEXMqCABggLCBZLlcKflIsRzqZ6HuIaD6seldYUWWeMUXjXKXJEvknedVb4rd668HdoWyZhyTvOqs8Vu9Rwd2gyJ6EG5WuVbCwTWMY5/1WioCfXgCuVlMq+opKDjzJOT9jrXiRnZGYfSVMPgO38leiiVr+xautzf2NKhxaMSOyhHphlNgwa0L2oQUI7seRuSSWCH1YkEBwn+p0lhpwIgINThOqkaBhgO/n7l5u3yWEYmXaHyRwgavOMw9Te5ufEaCpwJwNNyRcDk9EOH39ty9rY/JX5+TZV0I4a79azfaH7RXkXeZL1Zkn1MiLmVBAWWT9KBUuLXXSqynHpjhEO6HnMP1/ku2zqtz/wCj8C9ajvfyO+blFZmtDRPogDoHPzfBetxFXcbM2Gp7yks+v0vjuTiKu4ZsNSFdMrrfHju+h1BJrkea1oOA7SVys2yuK/i8WVldFLwOXtNsmZSXCpIk1HeTx9NW/wDLf3zLDVVPaJty9zPCDseLNEiRaMSOyhGYGU2DANC9iEFBbseRtSSWCH1YkEBT5R36PZInDqYPkP5qVEHncdJ0DtXC++NS8eZzssUEZVOmSLhLqSpb+HVeec5gNA0BeNOcrJb0jE5OTxY0AoIFgISaXkgP9uxPf23L2dl8lfn5NlXQjh7v1rN9oftFeRd5kvVmOfUyIuZUEAIAQAgLbJ6x1rxIxONOKw+kqfoO38loo2d3P7HSutzf2NLiRaMOOyhHYGUmDBrQvZhFQW6uRuSSWCHlYkEBT5R36PZIvDf6SQ8eiog87jpOgdq4X3xqji+ZzssUEZVOmSLjLfKmVC+q/pOYDQBmC8ec5TlvS5mJtyeLGgFUgWApJFgISaTkj9nYnv7bl7Oy+Svz8mqroRw1361m+0P2ivHu8yXqzJPqZEXMqCAEAIC3yesVa8SMTjTisPpKmnsHb+S0UbPK1/Y6V1ub+xpUSNRiUGUI9MMpMGDWhezGKisEbkklgh5WJBAU+Ud+j2SLw6nn134+Sog87jp7ANK4X3xqXjzOdligjKp0yRcZb5UyoalV/ScwGgDMF40pym96T8TE5OTxY00KCBwDFSSKAQCgFJJpGSX2fie/tuXsbL5K/PyaquhHC3frWb7Q/aK8e7zJerMk+pkRcyoIAQFvk9Yq13kYnFkVh9JU09g7fyWjZ9ndr+x0rrc39jSokajEjsoR6YZSYMGtC9mMVFYI3JJLBDysSCAp8o79HskXhv8APkP5qVEdLjpOgdq4X3xqji+ZSyxQRlU6ZIuEupKl1C+q/pOYDMBoC8aU3OW9LmYW3J4sbAUECwFJIsBAegKQLAUkmjZJ/Z+L7+2V6uzP/kjVV0I4S79azfaH7RXk3eZL1Zkn1MiLmVBASYEGXOqhsSHVk4HzgwhoHrceYLpXXKx/xWJaMXLkjuItfKCJQZQj5PRKdJgwa0Thzf2r1Y5sVhGCw9f6NadiWCj+x7jDKb8Ci/1w/wAVbfv7V7/0TvWdv7Pfp+Uv4HF/rR/im/f2r3/ob1nb+yJNv98hvo0q1mj+Wru4NKmyXwnOPqA6O1c533RwW6sX9/6Kuya5r9nPTsl8pLhKfKlsp1Kr+k+VbgBoAzBZZbLfOW9LmcnVZJ4sYORt7aMfozHdgqt3qvB26EZM9CtmWybAP8bEq0e1w5u8cy4yrnDqRRxceaGAFUgUApAoBSSKwQGiZKc1gi+/tlers/lI11dCOEu/Ws32h+0V5N3mS9WY59TIi5lR+BFdNm0IrDgarw3HQM57laEN+SivqTFbzwNYgxKEKNTjxmBlNgwAH5ntXvwgoR3UejFJLBEhWJBAVt4urLdTY1lM15dY8GhHZ9ao79AM5XK2xQWr+iKSnujdntT6FV864PFe41h59QfVptzMYMzR8VWqpp78njJ/7BCEMPF8y2XcuCATUpsqMcyo0Pa4YFrhiD/JQ0nzBxOU2SjKVN8y1MIa3nqUBmGlu7uWC/ZUlvQM1lX1icgBnWE4CgFIFZkBoWSvUMX39sr1Nn8pGuroRwl361m+0P2ivJu8yXqzHPqZEXMqTrHKZDu8SRV5qbKg4R0A8xPxXSmahYpMtB7skzWGnEYhe+eieoCtvF0Zb2MYyma8useDQjsPnPP6AZzmXK21VrVvkikpbvqN2e1Pj1HzZ7xWuNYekqD6rG/cZoaPiorrae9Lxk/94CMMPF8y2XYuCAEAIAQGaZWW1tuuzvJNwoVx5RgA5gc4/ekLydor3J+HJmO2O7Ip1wOZ6gNByX6ii+9tFers/lI119KOEu/Ws32h+0V5F3mS9WY59TIi5lQQF3acsJdqa2PJpfSowHmedwXsGjHOP3itlO2Sr8JeK/Z3he4+D8Szlf6g0zT/AIOBUNQ56zwAO7p+C7y29YfxRd7RoiJacqYUWrUlzKMmTcKowfWwaA0fdYMeZv5rnXtUIveli2/94EQtivF8y1GX0HUpP9u9duOhoy+etD3l5C1OT3t3qeOhoxnrQUMu4R/6cnvbvTjYaMZ60Dl1C1OT3t3pxsNBnrQ9GXMPVJHe3enGw0GetD3lxD1SR3t3qeNhoM9aFJlLfI15p0BRoVKb6Tjzvw6D6vUFnvujalgjnZYpFEsxyFBCTQMl+oovvbRXq7P5SNVfQjg7v1rN9oftFeRd5kvVmOfUyIuZUEA3WZwmdo50BHAViRbQhIsDBSBQCkCwFJIoBAKwUg9AQCgEB6hIIDQMl+oovvbRXq7P5SNVfSjiMoI9SNepjKjSOFVc9uOdpOIK8raIuNskzJYsJMr1xKAgBAMObg4qyJQoBSSKAUgUApJFBAKCkHqA9AQCkJPcEAIDR8nYr6NlisqgtfwSSDmxJP6r16INVpM11xwiiVcbbCuDQJkdlXgjmJ5iP5jnVp1QsX8kWlCMl4orOTNn1P5r965cJTp8nPKhoHJmz6n81+9OEp0/bGVDQOTNn1P5r96cJTp+2MqGgk5MWY9MP5r96cJTp+2MqGh6Ml7NqfzX71PC1afIyoaByYs2p/NfvThqtPkZUNAGTVn1P5r96cNVp8jKhoHJu0ap8x+9OGq0+ScuGh7ybtOqfMfvU8NVp8jKhoHJy06p8x+9OGq0+RlQ0Dk5adU+Y7enDVafIy4aHvJ206p8x29OGq0+Rlw0Dk7adU+Y7eo4arT5GXDQkQrFbKNQVKcRvDacQXOLsO8q0aK08UiY1xX0Lddi5//Z" type="image/icon type">
+    <style>
+       
+  
+ 
+  #box1{
+    display: flex;
+    width: 101%;
+    border: 1px solid transparent;
+    background-color: #080808;
+    margin-top: -7px;
+    height: 100px;
+     
+  }
+    
+    #navbar{
+        width: 20%;
+        display: flex;
+        height:auto;
+       border: 1px solid transparent;
+        background-color: #050505;
+        margin-right: 50px;
+        
+        margin-left: -6px;
+    }
+    #logo{
+        width: 80%;
+       height: 80px;
+       margin-left: 15px;
+       border: 1px solid transparent;
+       margin-top: 10px;
+       margin-bottom: 10px;
+       
+    }
+    #logo>img{
+        width: 100%;
+        border: 1px solid transparent;
+        height: 100%;
+       
+        background-color: #050505;
+        
+       
+    }
+    #names{
+        display: flex;
+       justify-content: right;
+       justify-content: space-around;
+       margin-left: 400px;
+       border: 1px solid transparent;
+        width: 65%;
+        height: 50px;
+        margin-top: 10px;
+              background-color:#080808;
+    }
+    #img1 {
+  width: 100%;
+   display: inline-block;
+   position: relative;
+   
+   color: rgb(64, 11, 124);
+   border: 1px solid transparent;
+    }
+#img1>img{
+    width: 85%;
+    margin-left: 100px;
+    height: 400px;
+    border-radius: 10px;
+
+}
+#video1{
+    margin-left: 102px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+#img2>img{
+width: 85%;
+margin-left: 100px;
+margin-top: 20px;
+}
+#box2{
+    border: 1px solid transparent;
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+#box2>h1{
+    text-align: center;
+    color: #232222;
+   
+}
+#box3{
+    width: 80%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    
+    display: flex;
+   
+}
+#text1{
+    margin-left: 100px;
+    width: 40%;
+}#img3{
+    margin-left: 125px;
+   
+}
+#box4{
+    width: 80%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    margin-top: 30px;
+    display: flex;
+   
+}
+#text1{
+    margin-left: 100px;
+    width: 40%;
+}#img3{
+    margin-left: 125px;
+   
+}
+#box5{
+    width: 80%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    margin-top: 30px;
+    display: flex;
+   
+}
+#text1{
+    margin-left: 100px;
+    width: 40%;
+}#img3{
+    margin-left: 125px;
+    border: 1px solid transparent;
+   
+}
+#box6{
+    width: 80%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    margin-top: 30px;
+   
+}
+#boximg{
+    display: flex;
+    margin-left: 30px;
+    
+}
+#box7{
+    width: 80%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    margin-top: 30px;
+   
+}
+#boximg{
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+    #box8{
+        margin-left: 100px;
+    }
+#box9{
+    width: 85%;
+    border: 1px solid transparent;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+#box9>img{
+    width: 100%;
+    border-radius: 10px;
+}
+#box10{
+    width: 85%;
+    border: 1px solid transparent; margin-left: 100px;
+    margin-top: 30px;
+    background-color: #f5f4f5;
+    border-radius: 10px;
+}
+#video2{
+    margin-left: 350px;
+    margin-top: -5%;
+    border: none;
+}
+#box11{
+    width: 85%;
+    border: 1px solid transparent; margin-left: 100px;
+    margin-top: 30px;
+}  
+#box11>img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box1">
+      <div id="navbar">
+         <a style="text-decoration:none; color:white;margin-top:18px;margin-left: 10px;" href="front.html"><h3>!!!</h3></a>
+         <button id="logo"><img src="https://www.zoomcar.com/zap/subscribe/build/7f1998e5f3e2ea1ad605b2203aef2ac5.svg" href="front.html"></button>
+        </div>
+         <div id="names">
+             <a style="text-decoration:none; color:white;" href=""><h2>Contact Us</h2></a>
+             <a style="text-decoration:none; color:white;" href="faqs.html"> <h2>FAQS</h2></a>
+             <a style="text-decoration:none; color:white;" href=""> <h2>Refer & Earn</h2></a>
+             <a style="text-decoration:none; color:white;" href="loginzoom.html"> <h2>Login/Signup</h2></a>
+          <button style="background-color: green;color:#f5f5f5;margin-top: 8px;border-radius: 5px;" ><a style="color: white;text-decoration: none;" href="refer&earn.html">START EARNING</a></button> 
+            </div>
+         </div>
+          <div id="img1">
+<img src="https://lh3.googleusercontent.com/FKvQCeRUbZ7UMujOCWGc3QILImIe93gXXw1rdTZKlNEsskz5BpifVbkOUZlZV9RKicMBrHI5VvWVPHS8CPFw2lZ16SqPilewCWW7szQdnUflAsikseLvoZI35D_5sKZXryNSMOWMPr2EqrPKFZrEu1tTK0erK5ZUOefAR6YnIp_YL3xL__2JT0tQk3WoiYHrtGF8OZW-SqdwsHGhoovN03IzrRcAt7TP3uoJ-BQLVcUCsG2Cmesij7wZ95WFaRG_7a7i8oCI3QuB5H7HAQauIYE_lbW-GSVyqa5idIadL-lAJVz_YNjKgNPN3v8hxjQsMoG1HD1N3OEwgJN2i0TRnIPJ3nC92rcUD1cOuF8rRN2sRhVlRciqj6sGq5sY9uMiRQ6PjvYRjQk4tWNCcAuY1VSUJHKMFkQfOXOb2XK70n5II6SYO7iS8O35vth0kHK3uOLlx6BBJmYflRPNW1LUhIp5lvk5XazfC93_c1-aqxnETDMoSxsyXQgBoM7J7vKkUByZGreaUAYR6UktE98BNWAivCHhE--EO05Z_cdUVpItdOxf-lixPvacDe7yy18OQ0LdxJ9wW26nNweuMy3O-IWf5MwD9jWmzTHYm13q-DU64Ubb-U3fAw4obyXhURPuRLnUoWgz0reNx3tfcbbV_e1t4GO4o04Sv1nJJRHMgnE5sYgEv3gOB8rc_4hjaN6_sMv-DlnXY7BH2TsnQvc4Gkkyy0O0j1MNw76r1fyo5BhuTHDAnY1dQnmyTYSQbPe1VQDqsDxQ2hVz4hpWFB5Ns2TagyVAeG18sq0=w547-h176-no?authuser=0">
+</div>
+<div id="video1">
+    
+    <iframe width="1130" height="360"style="border-radius: 10px;" src="https://www.youtube.com/embed/bTw81b8tKFI?autoplay=1&mute=1&loop=1&controls=0" autoplay title="Zoomcar Host | Earn Money From Your Car" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="img2">
+    <img src="https://www.zoomcar.com/zap/subscribe/build/2a59620f522135d45def6fbc74162966.webp">
+</div>
+<div id="box2">
+     <h1 style="font-size: 40px;">3 Simple steps to Start Earning with your car in 24 </h1>
+      <h1 style="font-size: 40px;margin-top: -30px;">hours</h1>
+</div>
+<div id="box3">
+    <div id="text1">
+        <h2 id="sign">
+            1. Sign Up for Free!
+        </h2>
+        <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges.</p>
+    </div>
+    <div id="img3">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/bb6776beb9b8bacdc711e5a43f401134.svg">
+    </div>
+</div>
+<div id="box4">
+     
+    <div id="img3">
+        <img src="https://www.zoomcar.com/zap/subscribe/build/29d798d8bc5d57bf22445ed3cc67cff1.svg">
+    </div>
+    <div id="text1">
+        <h2 id="sign">
+            1. Sign Up for Free!
+        </h2>
+        <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges.</p>
+</div>
+</div>
+<div id="box5">
+    <div id="text1">
+        <h2 id="sign">
+            1. Sign Up for Free!
+        </h2>
+        <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges.</p>
+    </div>
+    <div id="img3">
+        <img src="data:image/png;base64,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">
+    </div>
+</div>
+<div id="box6">
+    <h1 style="border: 1px solid transparent;font-size:40px;color: #232222;margin-left: 30px;">How we protect your car</h1>
+    <div id="boximg">
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/e2bfa54a9b46567921c3f14e1276c68e.svg">
+            <h3>We cover major damages & repair</h3>
+            <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/1f4b5b69d928bbf104735bdea4914f79.svg">
+            <h3>Your cars stay in safe hands</h3>
+            <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/eb002ff59dd838a60fd664d21539d877.svg">
+            <h3>Contactless sharing</h3>
+            <p>Become part of the Zoomcar Host programe for absolutley free by filling up short form after signup.It takes less than 2 minutes to fill the form .No hidden charges</p>
+        </div>
+       
+    </div>
+</div>
+<div id="box7">
+    <h1 style="border: 1px solid transparent;font-size:40px;color: #232222;margin-left: 30px;">Growing rapidly</h1>
+   <p style="color: rgb(105, 102, 102);margin-left: 30px;">Join host programme and be part of the largest tech enabled car sharing market  </p>
+    <div id="boximg">
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/e3a6d127cac35a3a7a139256bb3761eb.png">
+            <h2>25000+</h2>
+            <p style="color: grey;">Satisfied host</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/4a5f55fc81b9a6df6a460a025fdfa509.png">
+            <h2>50000+</h2>
+            <p style="color: grey;">Booking served</p>
+        </div>
+       
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/36da13bf403485c4efacd507efd93735.png">
+            <h2>32cr+</h2>
+            <p style="color: grey;">KMs Run</p>
+        </div>
+        <div>
+            <img src="https://www.zoomcar.com/zap/subscribe/build/c0db9479a08980b830b63433f60d336c.png">
+            <h2>300cr+</h2>
+            <p style="color: grey;">Earned by Host</p>
+        </div>
+       
+    </div>
+</div>
+<div id="box8">
+    <h1 style="font-size: 40px;">Share your<i style="color: #10a310;"> XUV 500</i> </h1>
+    <h1 style="font-size: 40px;margin-top: -2%;">And Earn upto<i style="color: #10a310;"> 49999 </i> INR Per Month</h1>
+    <button style=" background-color: #10a310;border-radius:5px ; font-size:25px ;color: white;border: none;">Calculate Earning</button>
+</div>
+<div id="box9">
+    <img src="https://lh3.googleusercontent.com/G7CijpIOcPs0Yybxgb3s_JnTI5RESOOrRBvcg1oKWabP6yWF1IilVEkKz0RuRqF2Wj5XHV-W_FZ30THEoHvPEphraFL9cmqcuJwavX-bWW-ie2VuDYmLWLbrlrDnBa6rz68MvNOIjflHvVZAeC4SacGg7SoZcCEhHBGzePV4gwlcHjb1U3ec_h1Q9KRQEXM48uS3sPmasFa6_xWFNtRT7Oz0MFHIEWW0WikGcYMXvV9qZ_8M8Kqqp6C3iDAxRai4wMzbk_Gh0_7HPkq8JGWLfX5oH5tYs04eRb9Rr0hE1e4praEBCN2SRDmX0rgH9_li-vVx3lwk53jWR31Jro0i6kchHHXEUWHCHwp3RssgKRP6jx1khPN194WNNEg82xTVjq7PnbZytN3_TuliEMv3W8NF-dXlsfwuqZDTbwMsda6eqcUn7NnP2FFQGe8etwGaJCKUybapRJK80Vi-vNDm6_EEGAeMoahA81IDdIICRROaSkcrPYC-Kco8lVjS-nbY6docIs01xZHLkvS8pZDxZ18p7bgApZ3H8eoPzYDQMivaSl5265MZ9ZYuSrFPTv2ofMfmU-L41fPzSJZK-PRmyggUPfP8vVqpj9wQs0v3igjIl8r2BxgM7qWC-34hN7etQP1uW5SrLtKqXb5BO5m13wRylwO0r-14U5LS26ci5s3uOr6FCqNMIugshl-043BNiApCxQDK8m4uGnFTLfJhB2fdXn0jxeLbpsiR4om986-bFEcYPh9n4b_yYNaCDZVqSd-RGFr7G-tuNerAHCkGI1bhs6ZUAYg8U3c=w1209-h425-no?authuser=0">
+</div>
+<div id="box10">
+    <h2 style="margin-left: 250px;margin-top:70px;">User loves Zoomcar Host programe. our app has 4.8 star rating on playstore </h2>
+   <div id="video2">
+    <video width="500px" height="200px" controls autoplay> 
+      
+        <source src="https://www.zoomcar.com/zap/subscribe/build/993b9e144e89da0b2a0df580e13a2cbe.mp4"  type="video/mp4">
+ </video>
+</div>
+
+</div>
+<div id="box11">
+    <img src="https://lh3.googleusercontent.com/P1OJouYAsNCoXSxUdpwHjrVVr7wNBh8vmzBIWcY53Dhb7bNB5BwjaBat2Sndl9rcfeLoPLYYest_eTXEp_D5McWzxDr4rPTnJyTwelXBrNN6Uxjef3X7QYoN9QP4H8uGlaAbqFl0Lx7LYOIHeZKmwskLcetkRPDjAcURQQoqZA11fNUXevtKz08O4Xdkga336CvY6G0LCVd5u0QHYz-bx1PYre3zb3cHbVsKR7RsQCEuXJHVuTryJJgu_R9i14X5al4kzao8Y6DgNa41puUp_3xLm44bBZwslEweJRZNtc4pV8U8CQnogMOgXWRn2dP0IngC3-VJHmHwukWUMe5dMo3auOt9vQlaiKt1IkU6jSHc3h1Dj4GUBc7EROSc8q6IRGY9M1vJM01KLCjn_jA_ylOST-5uS7lsd2KRBsLfngI2WoHe1lq6acGwATGkkY-5W-sLSmoJ8kkFDmuXLgTEE-knyXSLSR6OzjF0Bb_M-8FGm4dhBb1_pceWSMAft39MSAAUOBMxEw1yI-ra0i6VRB25ZshxmSEoqKQ0JD3fsnsPb5zt3svTlqU0c7KImDUS6KFbA1_XWJ1lsdb-AGLHV2riJlwwWpoVgyX8BcggZYV0lerucbs2ZhJxDWBnyonX708lhwi5Gj8l2CJcr1C3-aJp2KiL6cjkm-BFkeGdCCoecCsruIehkeGBiEiC5pqxI77BZliJTJIPJU9oxokAohoUFwJvBiNy2WcqscgGLLvqlAjFEpFe3gr6H7CY_0Vlz3XCeG4u8dWtNK8czw2D59s5F2NjErlb0Pc=w977-h550-no?authuser=0">
+</div>
+ </div>
+</body>
+</html>
