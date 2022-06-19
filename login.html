@@ -6,25 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <style>
+        #main{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            width: 45%;
+            margin: auto;
+            margin-top: 70px;
+        }
         
         h1{
             text-align: center;
             color: #10a310;
         }
         #mail{
-            width: 30%;
+            margin-bottom: 10px;
+        }
+        #mail>input{
+            width: 70%;
             height: 50px;
             display: grid;
             margin: auto;
-            padding: 20px;
+            padding: 5px;
+            border:  solid #10a310 ;
+            border-radius: 5px;
             
         }
-        #pass{
-            width: 30%;
+        #pass>input{
+
+            width: 70%;
             height: 50px;
             display: grid;
             margin: auto;
-            padding: 20px;
+            padding: 5px;
+            border:  solid #10a310 ;
+            border-radius: 5px;
+            
+
+            
+
+            
+            
         }
         #sub{
             display: flex;
@@ -42,6 +62,7 @@
         #sign{
             text-align: center;
             margin-left: 200px;
+
             
         }
         
@@ -49,16 +70,19 @@
     </style>
 </head>
 <body>
-    <form>
-        <h1>Zoomcar<br> Never Stop Living</h1>
-        <div id="mail" >
-            <input type="email" placeholder="Eamil Id" >
-        </div>
-        <div id="pass" >
-            <input type="password" placeholder="Password" >
-        </div>
-       <a style="color: grey; text-decoration:none " href="navbar"> <input type="submit" placeholder="submit" id="sub" ></a>
-        <a style=" text-decoration:none;" href="final.html"><p id="sign" >Signup For Zoomcar</p></a>
-    </form>
+    
+        <form id="main" >
+            <h1>Zoomcar<br> Never Stop Living</h1>
+            <div id="mail" >
+                <input type="email" placeholder="Eamil Id" >
+            </div>
+            <div id="pass" >
+                <input type="password" placeholder="Password" >
+            </div>
+           <a style="color: grey; text-decoration:none " href="navbar"> <input type="submit" placeholder="submit" id="sub" ></a>
+            <a style=" text-decoration:none;" href="final.html"><p id="sign" >Signup For Zoomcar</p></a>
+        </form>
+
+    
 </body>
 </html>
