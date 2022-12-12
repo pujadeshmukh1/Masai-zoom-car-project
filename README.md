@@ -77,7 +77,7 @@ We are expecting to create a pixel-perfect cloned site of the Zoomcar website, w
 - Learned that communication is the key to being a successful team.
 - We get to know how the project has to complete within the given time.
 - Also, learn how to tackle the problems and solve them.
-- Check out our repository on GitHub: https://github.com/AdarshKhandare/Zoomcar
+
 
 Thanks, Masai for giving us this wonderful opportunity.
 
